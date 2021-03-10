@@ -1,4 +1,4 @@
-package solutions.ransomnote;
+package solutions.hashmaps.ransomnote;
 
 import java.util.HashMap;
 import java.util.Map;
