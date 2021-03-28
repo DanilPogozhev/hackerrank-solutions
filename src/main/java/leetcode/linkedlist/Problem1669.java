@@ -5,7 +5,7 @@ import leetcode.linkedlist.support.ListNode;
 /*
  * https://leetcode.com/problems/merge-in-between-linked-lists/
  */
-public class Task1669 {
+public class Problem1669 {
     public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
         ListNode start = findNode(list1, a - 1);
         ListNode end = findNode(list1, b + 1);

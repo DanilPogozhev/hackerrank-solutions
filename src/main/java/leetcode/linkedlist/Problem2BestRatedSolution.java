@@ -7,7 +7,7 @@ import leetcode.linkedlist.support.ListNode;
  * Solution url: https://leetcode.com/problems/add-two-numbers/discuss/1010/Is-this-Algorithm-optimal-or-what
  * Author url:   https://leetcode.com/potpie/
  */
-public class Task2BestRatedSolution {
+public class Problem2BestRatedSolution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode c1 = l1;
         ListNode c2 = l2;

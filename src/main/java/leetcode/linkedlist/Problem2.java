@@ -5,7 +5,7 @@ import leetcode.linkedlist.support.ListNode;
 /*
  * https://leetcode.com/problems/add-two-numbers/
  */
-public class Task2 {
+public class Problem2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode start = l1;
         int tempVar = l1.val + l2.val;

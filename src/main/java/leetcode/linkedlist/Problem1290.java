@@ -5,7 +5,7 @@ import leetcode.linkedlist.support.ListNode;
 /*
  * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
  */
-public class Task1290 {
+public class Problem1290 {
     public int getDecimalValue(ListNode head) {
         StringBuilder temp = new StringBuilder();
 
