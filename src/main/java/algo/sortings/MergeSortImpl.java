@@ -6,7 +6,7 @@ public class MergeSortImpl {
             int q = (p + r) / 2;
             sort(array, p, q);
             sort(array, q + 1, r);
-            merge(array, p, q, r);
+            mergeWithoutMarkers(array, p, q, r);
         }
 
         return array;
@@ -38,6 +38,44 @@ public class MergeSortImpl {
             } else {
                 array[k] = rightArray[rightCounter];
                 rightCounter++;
+            }
+        }
+
+        return array;
+    }
+
+    public int[] mergeWithoutMarkers(int[] array, int p, int q, int r) {
+        int leftLength = q - p + 1;
+        int rightLength = r - q;
+
+        int[] leftArray = new int[leftLength];
+        int[] rightArray = new int[rightLength];
+
+        for (int i = 0; i < leftLength; i++) {
+            leftArray[i] = array[p + i];
+        }
+
+        for (int i = 0; i < rightLength; i++) {
+            rightArray[i] = array[q + 1 + i];
+        }
+
+        int leftCounter = 0;
+        int rightCounter = 0;
+        for (int k = p; k < r + 1; k++) {
+            if (leftCounter < leftLength && rightCounter < rightLength) {
+                if (leftArray[leftCounter] <= rightArray[rightCounter]) {
+                    array[k] = leftArray[leftCounter];
+                    leftCounter++;
+                } else {
+                    array[k] = rightArray[rightCounter];
+                    rightCounter++;
+                }
+            } else if (leftCounter == leftLength && rightCounter < rightLength) {
+                array[k] = rightArray[rightCounter];
+                rightCounter++;
+            } else if (leftCounter < leftLength && rightCounter == rightLength) {
+                array[k] = leftArray[leftCounter];
+                leftCounter++;
             }
         }
 
